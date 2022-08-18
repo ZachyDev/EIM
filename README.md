@@ -2,7 +2,7 @@ Enterprise Investigation Management applicaion that keeps track of fraud cases r
 
 #Modules
 
-1.Case module
-2.Client module
-3.Admin module
+1.Case module <br />
+2.Client module <br />
+3.Admin module<br />
 4.Transaction module
