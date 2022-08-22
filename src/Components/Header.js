@@ -4,13 +4,13 @@ import './style.css'
 
 function Header() {
   return (
-    <div class="header">
-    <div class="inner-header">
-    <div class="logo">
+    <div className="header">
+    <div className="inner-header">
+    <div className="logo">
       <img src= { logo } width="70px" height="70px" />
     </div>
 
-    <div class="nav">
+    <div className="nav">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
