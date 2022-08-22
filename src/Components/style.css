@@ -91,3 +91,13 @@
     width: 100%; 
   }
   
+.products{
+    list-style-type: none;
+    border: 1px solid grey;
+    width: 30%;
+    margin-left: 35%;
+    border-radius: 20px;
+}
+.products li {
+  height: 4vh;
+}
