@@ -3,22 +3,22 @@ import { useState } from 'react';
 import './style.css';
 
 function Products() {
-    const [products,setProducts] = useState([
+    let [products, setProducts] = useState([
         {
-            name: "HP Laptop",
+            name: 'HP Laptop',
             price: 10000
         },
         {
-            name: "ASUS Laptop",
+            name: 'ASUS Laptop',
             price: 2200
         },
         {
-            name: "Dell Laptop",
+            name: 'Dell Laptop',
             price: 50000
         }
     ])
   return (
-    <div>
+    <div className='products-container'>
         <h1>Products</h1>
         {
             products.map(product => {
