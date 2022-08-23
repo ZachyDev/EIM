@@ -4,15 +4,18 @@ import './style.css';
 
 function Products() {
     let [products, setProducts] = useState([
-        {
+        {   
+            id: 1,
             name: 'HP Laptop',
             price: 10000
         },
-        {
+        {   
+            id: 2,
             name: 'ASUS Laptop',
             price: 2200
         },
         {
+            id: 3,
             name: 'Dell Laptop',
             price: 50000
         }
@@ -24,7 +27,7 @@ function Products() {
             products.map(product => {
                 return(
                     <ul className='products'>
-                        <li>{ product.name }</li>
+                        <li key = { product.id }>{ product.name }</li>
                         <li>{ product.price }</li>
                     </ul>
                 )
