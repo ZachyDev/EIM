@@ -1,35 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import Header from './Components/Header';
-import Products from './Components/Products';
-import Banner from './Components/Banner';
 
 function App() {
-  const [homeSection, setHomepageContent] = useState('Investigation Management Section');
-  const [promoBanner, setPromoBanner] = useState(true);
-
-  // change home content
-  const changeHomeContent = () => {
-    setHomepageContent('Enterprise Investigation System');
-  }
-
-  // hide promobanner
-  const hidePromoBanner = () => {
-    setPromoBanner(false);
-  }
+  const [users,setUsers] = useState([]);
+  useEffect(() => {
+    // fetch data from JSON Fake API
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(response => {
+        setUsers(response);
+      })
+  },[])
 
   return (
     <div className="App">
       <Header />
-     <h1>{ homeSection }</h1>
-     <button onClick= { changeHomeContent }>Homepage</button>
-     <Products />
+      <h1>Users Database</h1>
+      {/* display users */}
+      <div className='users'>
+      {
+        users.map(user => {
+          return(
+              <div className='user'>
+                <h1>{ user.name }</h1>
+                <p>{ user.email }</p>
+              </div>
+          )
+        })
+      }
+    </div>
 
-     {/* Banner component */}
-     {
-      promoBanner === true ? (<Banner discountPromo = '50% off the first purchase!'/>) : null
-     }
-     <button onClick={ hidePromoBanner }>Remove Banner</button>
     </div>
   );
 }
