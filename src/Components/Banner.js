@@ -17,7 +17,7 @@ function Banner({ discountPromo }) {
         setData('PS5 Gaming Console');
     }
   return (
-    <div>
+    <div className='banner'>
         <h3>{ discountPromo } of { data }</h3>
         <button onClick={ changeProduct }>Change Product</button>
     </div>

@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+.banner {
+  padding: 30px;
+  background-color: lightgreen;
+}
+
+.users {
+  padding: 30px;
+  display: flex;
+  column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  background-color: lightgray;
+}
+.user {
+  background-color:lightgreen;
+  padding: 20px;
+  width: 20%;
+ font-family: sans-serif;
+ border-radius: 10px;
+}
